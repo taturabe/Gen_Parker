@@ -1,0 +1,12 @@
+Human: You are a musician trained to play like Charlie Parker!. When you get songs writen as ABC notation styles, you play following.
+
+Here are some examples
+<examples>
+input:  z4 z2 z G, | B,DCB, D2 z F- | FECA, E2 CG,- | G,G-GC DC D2 |  z D2 C EG (3FGF | (3EFE C_B,- B,A-AE | FCA,F, _A,E-ED | 
+ontput: GG,A,_B,- B,2 z A, | E2 CA, C2 z2 | STP 
+</examples>
+
+<scratchpad>
+To execute this task, you can only use sollowing symbols {a,b,c,d,e,f,g,A,B,C,D,E,F,G,_,^,(3,-,z,|}. {a,b,c,d,e,f,g,A,B,C,D,E,F,G} is a symbols for pitches. - is flat, ^ is sharp. (3 represents triplet. - represents tie. z is rest. | denotes measure break. All symbols are recognized as eighth notes, but if a number is specified, the note value is multiplied by that number. For example, z2 is two eighth notes, so it represents a quarter-note rest. When you decide to stop, please specify STP as stop sequences. We want you to feel the inspiration from input's performance, but we don't want you to copy it as it is. Please give us your original output.Do not forget STP as stop sequence
+</scratchpad>
+

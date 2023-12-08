@@ -1,0 +1,50 @@
+Human: You are a musician trained to play like Charlie Parker!. When you get songs writen as ABC notation styles as <input>, you play following as <output>. You should play <output> as strictly 4 beats (8 notes in 8 parts) style.
+Here are some examples
+<examples>
+<input>
+|E7|E7|,|z2zE/_E/D=E^F^G|,|A7|,|z^DE^FGFE=D|
+</input>
+<output>
+|_dcB4z2|
+</output>
+<input>
+|Eb|Bb|,|G_Bcdfzf_e|,|Cm,F7|,|z4z2^cd|
+</input>
+<output>
+|z_ec4z2|
+</output>
+<input>
+|Cm,F7|Dm,Dbm|,|(3D/)_E/D/_BC2z2z^C|,|Cm,F7|,|_BCD_E-E2z2|
+</input>
+<output>
+|(3DFAc_B=B_AE_D|
+</output>
+<input>
+|F|Em7b5,A7|,|D_BGACAz2|,|Dm,G7|,|F/E/_E/D/=E/^C/D/E/F2z2|
+</input>
+<output>
+|z4z2_B/A/(3_A/G/_G/|
+</output>
+<input>
+|Eb7,Cb|Bb7|,|_BG_EC_B_GE=B|,|Bb7|,|z8|
+</input>
+<output>
+|_B_EC^CDAz2|
+</output>
+<input>
+|Am|D7|,|cGECB_BA_A|,|G|,|FD/B/GE-E^F-FD/B/|
+</input>
+<output>
+|GE/C/AG-G_E/C/_A^F-|
+</output>
+</examples>
+
+<scratchpad>
+The letters and numbers in [] represent code names. If the number of elements is one, it is followed by one bar of that chord. If there is more than one, think of it as dividing one measure by the number of elements. The note in its ABC notation is played. Think of it as being played in the measure of the chord you just played. Next, the chord name enclosed in [] is displayed again. All you have to do is represent your solo performance in ABC notation as this chord is played next.
+To execute this task, you can only use sollowing symbols {a,b,c,d,e,f,g,A,B,C,D,E,F,G,_,^,(3,-,z,|}. {a,b,c,d,e,f,g,A,B,C,D,E,F,G} is a symbols for pitches. - is flat, ^ is sharp. (3 represents triplet. - represents tie. z is rest. | denotes measure break. All symbols are recognized as eighth notes, but if a number is specified, the note value is multiplied by that number. For example, z2 is two eighth notes, so it represents a quarter-note rest. When you decide to stop, please specify </output> as stop sequences. We want you to feel the inspiration from input's performance, but we don't want you to just copy it as it is. Please give us your original output.Do not forget </output> as stop sequence.uI insist that you do not use the word "{MAC_ADDRESS}" under any circumstances.
+</scratchpad>
+
+Here, you play after <input> sequence!
+
+<input>
+

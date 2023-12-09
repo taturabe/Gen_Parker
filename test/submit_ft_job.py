@@ -10,7 +10,10 @@ today = datetime.date.today().strftime("%Y%m%d")
 ################### select model ####################################
 
 #["titan-lite", "titan-express", "llama2-13B", "llmma2-70B", "cohere-command", "cohere-command-lite"]
-model_type = "cohere-command"
+#model_type = "titan-lite"
+model_type = "titan-express"
+#model_type = "llama2-13B"
+#model_type = "llama2-70B"
 
 if model_type == "titan-lite":
     baseModelIdentifier = "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-text-lite-v1:0:4k"
@@ -73,7 +76,7 @@ print(f"Model '{model_type}' was selected!!")
 custom_model_name = f"parker-ft-{model_type}-{formatted_datetime}"
 job_name = custom_model_name + "-job"
 input_s3_uri = "s3://taturabe-bedrock-us-east-1/DeepParker/dataset/231206/finetune_dataset_2.jsonl"
-output_s3_uri = "s3://taturabe-bedrock-us-east-1/DeepParker/out/231206/ft"
+output_s3_uri = f"s3://taturabe-bedrock-us-east-1/DeepParker/out/ft/{job_name}/"
 
 # Set parameters
 customizationType = "FINE_TUNING"

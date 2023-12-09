@@ -1,17 +1,17 @@
 import boto3
 import json
-from datetime import datetime
+import datetime
 
 bedrock = boto3.client(service_name='bedrock')
-current_datetime = datetime.now()
+current_datetime = datetime.datetime.now()
 formatted_datetime = current_datetime.strftime("%y%m%d-%H%M%S")
+today = datetime.date.today().strftime("%Y%m%d")
 model_type = "titan-lite"
 
-custom_model_name = f"dummy-parker-pre-{model_type}-{formatted_datetime}"
+custom_model_name = f"parker-pre-{model_type}-{formatted_datetime}"
 job_name = custom_model_name + "-job"
-#input_s3_uri = "s3://taturabe-bedrock-us-east-1/DeepParker/dataset/231206/pretrain_dataset_without_chords.jsonl"
 input_s3_uri = "s3://taturabe-bedrock-us-east-1/DeepParker/dataset_without_chords.jsonl"
-output_s3_uri = "s3://taturabe-bedrock-us-east-1/DeepParker/out/231206/pre"
+output_s3_uri = f"s3://taturabe-bedrock-us-east-1/DeepParker/out/{today}/pre"
 
 # Set parameters
 customizationType = "CONTINUED_PRE_TRAINING"
@@ -44,7 +44,8 @@ outputDataConfig = {"s3Uri": output_s3_uri}
 
 # Create job
 bedrock.create_model_customization_job(
-    jobName=jobName, 
+    jobName=jobName,
+    customizationType=customizationType,
     customModelName=customModelName,
     roleArn=roleArn,
     baseModelIdentifier=baseModelIdentifier,
